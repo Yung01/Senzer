@@ -8,5 +8,5 @@ matplotlib
 seaborn
 wordcloud
 CleanText
-sklearn
+scikit-learn
 openpyxl
