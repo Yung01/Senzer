@@ -210,32 +210,37 @@ def get_pos_keyword(product):
     if (product == 'Air Fryer'):
         dataset = pd.read_excel('word/af.xlsx')
         dataframe = pd.DataFrame(dataset, columns=['word', 'weight', 'topic', 'sentiment'])
-        num =0
+        pos_num =0
+        neg_num =1
 
     elif (product == 'Air Purifier'):
         dataset = pd.read_excel('word/ap.xlsx')
         dataframe = pd.DataFrame(dataset, columns=['word', 'weight', 'topic', 'sentiment'])
-        num = 1
+        pos_num = 2
+        neg_num = 3
 
     elif (product == 'Chair'):
         dataset = pd.read_excel('word/c.xlsx')
         dataframe = pd.DataFrame(dataset, columns=['word', 'weight', 'topic', 'sentiment'])
-        num = 2
+        pos_num = 4
+        neg_num = 5
 
     elif (product == 'Kettle'):
         dataset = pd.read_excel('word/k.xlsx')
         dataframe = pd.DataFrame(dataset, columns=['word', 'weight', 'topic', 'sentiment'])
-        num = 3
-
+        pos_num = 6
+        neg_num = 7
     elif (product == 'Lamp'):
         dataset = pd.read_excel('word/l.xlsx')
         dataframe = pd.DataFrame(dataset, columns=['word', 'weight', 'topic', 'sentiment'])
-        num = 4
+        pos_num = 8
+        neg_num = 9
 
     else:
         dataset = pd.read_excel('word/p.xlsx')
         dataframe = pd.DataFrame(dataset, columns=['word', 'weight', 'topic', 'sentiment'])
-        num = 5
+        pos_num = 10
+        neg_num = 11
 
     # selecting rows based on condition
     pos1 = dataframe[(dataframe['topic'] == 1) & (dataframe['sentiment'] == 'positive')]
@@ -243,10 +248,10 @@ def get_pos_keyword(product):
 
     dataset_topics = pd.read_excel('topic/topic.xlsx')
     df_topic = pd.DataFrame(dataset_topics, columns=['product', 'topic1', 'topic2', 'sentiment'])
-    pos_topic1 = df_topic['topic1'][num]
-    pos_topic2 = df_topic['topic2'][num]
-    neg_topic1 = df_topic['topic1'][num]
-    neg_topic2 = df_topic['topic2'][num]
+    pos_topic1 = df_topic['topic1'][pos_num]
+    pos_topic2 = df_topic['topic2'][pos_num]
+    neg_topic1 = df_topic['topic1'][neg_num]
+    neg_topic2 = df_topic['topic2'][neg_num]
 
     return pos1, pos2, pos_topic1, pos_topic2, neg_topic1, neg_topic2
 
