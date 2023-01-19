@@ -2,9 +2,9 @@ streamlit
 PIL
 pandas
 numpy
-plotly.express
+plotly
 nltk
-matplotlib.python
+matplotlib
 seaborn
 wordcloud
 cleantext
