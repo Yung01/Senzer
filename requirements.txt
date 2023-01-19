@@ -8,5 +8,5 @@ matplotlib
 seaborn
 wordcloud
 clean-text
-pickle
+pickletools
 sklearn
