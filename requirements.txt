@@ -7,6 +7,6 @@ nltk
 matplotlib
 seaborn
 wordcloud
-clean-text
+cleantext
 pickle
 sklearn
