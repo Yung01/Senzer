@@ -3,6 +3,7 @@ PIL
 pandas
 numpy
 plotly
+plotly.express
 nltk
 matplotlib
 seaborn
