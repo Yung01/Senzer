@@ -29,7 +29,7 @@ def show_home():
                 * **About**
                 General knowledge about e-Commerce, sentiment analysis and information about my project
                 * **Dashboard** 
-                Visualizations about rating data of 6 different products on Amazon  
+                Visualizations about data of 6 different products on Amazon  
                 * **Let's Predict!** 
                 Enter the review and predict the sentiment of the review! 
                 """)
